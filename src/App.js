@@ -4,21 +4,19 @@ function App() {
   return (
     <div className='w-full min-h-screen m-0 p-0 bg-yellow-500 flex flex-col'>
       <Navbar />
-      <div className="w-4/5 md:w-4x5 lg:w-3/5 space-y-10 justify-center mx-auto my-24 bg-white shadow-myShadow">
+      <div className="w-4/5 md:w-4x5 lg:w-3/5 justify-center mx-auto my-24 bg-white shadow-myShadow">
 
        
 
-        <div className='md:grid md:grid-cols-2 md:gap-8 items-center'>
-
-            <div className='p-10 flex'>
+        <div className='md:grid md:grid-cols-2 md:gap-8'>
+            <div className='p-10 flex items-center justify-center'>
               <img src="myHead.png" className='w-60 h-auto lg:w-80 lg:h-auto'></img>
             </div>
-            <div className='p-10 '>
+            <div className='p-10 flex justify-center flex-col'>
               <p className="text-2xl">Hello, my name is</p>
-              <p className="text-5xl lg:text-7xl text-black mb-4 ">Dominik</p>
+              <p className="text-5xl lg:text-7xl text-black">Dominik</p>
               <p className="text-2xl">&#60;junior&#62;Full Stack Dev&#60;&#47;junior&#62;<span className='animate-ping text-rose-500'>|</span></p>
             </div>
-
         </div>
 
         <div className='md:grid md:grid-cols-2 md:gap-8 bg-green-800'>
