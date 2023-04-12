@@ -19,11 +19,11 @@ const ProgressBar = ({name, progression, link}) => {
     return (
         <div className="mt-5">
             <div className="flex justify-between mb-1">
-                <span className="text-base font-medium text-blue-700">{name}</span> {link && <button><a href={link}>test button</a></button>}
-                <span className="text-sm font-medium text-blue-700">{progression}</span>
+                <span className="text-base font-medium text-sky-500">{name}</span> {link && <button><a href={link}>test button</a></button>}
+                <span className="text-sm font-medium text-sky-500">{progression}</span>
             </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className={`bg-blue-600 h-3 rounded-full ${width} transition ease-in-out delay-150 bg-blue-500 hover:scale-110 hover:bg-indigo-500 duration-300`}></div>
+                    <div className={`bg-sky-400 h-3 rounded-full ${width} transition ease-in-out delay-150 bg-blue-500 hover:scale-110 hover:bg-indigo-500 duration-300`}></div>
                 </div>
         </div>
     );

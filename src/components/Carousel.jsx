@@ -19,8 +19,8 @@ const Carousel = ({ children: slides }) => {
 
     return (
         <div className="overflow-hidden relative">
-            <div className="flex transition-transform ease-out duration-1000"
-                style={{ transform: `translateX(-${current * 100}%)` }}>{slides}
+            <div className="flex transition-transform ease-out duration-1000" style={{ transform: `translateX(-${current * 100}%)` }}>
+                {slides}
             </div>
 
             <div className="absolute inset-0 flex intems-center justify-between p-6">
@@ -31,12 +31,12 @@ const Carousel = ({ children: slides }) => {
                     <AiOutlineArrowRight />
                 </button>
             </div>
-            
-            <div className='absolute bottom-4 right-0 left-0'>
+
+            <div className='absolute bottom-6 right-0 left-0'>
                 <div className='flex items-center justify-center gap-2'>
                     {slides.map((xxx, index) =>
                         <div key={index}>
-                        <div className={`transition-all w-3 h-3 bg-rose-500 rounded-full ${current === index ? "p-2" : "bg-opacity-50"}`}/>
+                            <div className={`transition-all w-3 h-3 bg-gray-500 rounded-full ${current === index ? "p-2" : "bg-opacity-50"}`} />
                         </div>
                     )}
                 </div>

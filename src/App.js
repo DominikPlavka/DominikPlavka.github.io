@@ -29,7 +29,7 @@ function App() {
           <div className="flex-col p-12 flex md:items-start items-center justify-center">
             <p className="text-2xl">Hello, my name is</p>
             <p className="text-5xl lg:text-7xl font-bold">Dominik</p>
-            <p className="text-2xl mt-12 text-center md:text-left">&#60;junior&#62;&nbsp;Full Stack Dev&nbsp;&#60;&#47;junior&#62;<span className='font-bold animate-ping text-rose-500'>|</span></p>
+            <p className="text-2xl mt-12 text-center md:text-left">&#60;junior&#62;&nbsp;Full Stack Dev&nbsp;&#60;&#47;junior&#62;<span className='font-bold animate-ping text-sky-500'>|</span></p>
           </div>
         </div>
 
@@ -57,7 +57,9 @@ function App() {
         </div>
 
       </div>
-
+      <div className = 'mb-10 ml-20 mr-20'>
+        <p className='text-white text-center'>Whole page hard-coded &#40;no external packages used, except <a href="https://react-icons.github.io/react-icons/" target="_blank"><span className='text-sky-400'>react-icons</span></a>&#41;. Latest version deployed 12.4.2023</p>
+      </div>
     </div>
   );
 }
