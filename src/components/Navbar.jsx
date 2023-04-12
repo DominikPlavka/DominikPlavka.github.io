@@ -1,7 +1,7 @@
 const Navbar = () => {
 
     return (
-        <nav className="sticky top-0 bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 shadow-bottomShadow">
+        <nav className="sticky top-0 bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 shadow-bottomShadow z-50">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
                 <a href="https://www.linkedin.com/in/dominik-plavka-0411549a/" className="flex items-center">
                     <img src="https://svgshare.com/i/r_W.svg" className="h-6 mr-3 sm:h-9" alt="Dominik Plavka logo" />
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;
