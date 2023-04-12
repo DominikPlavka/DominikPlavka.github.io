@@ -8,10 +8,10 @@ const projectData = [
 ];
 
 const slides = [
-  "nodeJS-logo.png",
-  "nodeJS-logo.png",
-  "nodeJS-logo.png",
-  "nodeJS-logo.png"
+  "nodeJS.png",
+  "TS-JS.png",
+  "react.png",
+  "github.png"
 ];
 
 function App() {
@@ -43,13 +43,12 @@ function App() {
           </div>
           <div className='p-12 flex flex-col order-first md:order-last'>
             <h2 className="text-3xl lg:text-4xl">About me</h2>
-            <p className='mt-5'>My name is Dominik Plavka and Iam fresh graduate of Green Fox Academy. Before this "big step" in my life, I worked as Marketing Manager in various roles.</p>
+            <p className='mt-5'>My name is Dominik Plavka and Iam fresh graduate of Green Fox Academy. Before this "big step" in my life, I worked as Marketing Manager in broad range of roles.</p>
             <p className='mt-5'>This experience could be very useful in web development as well, because I participated in web/graphic design and I created basic webpages for various clients.</p>
-            <p className='mt-5 font-medium'>During the course I worked in a team of 5 members with SCRUM as our main framework.</p>
           </div>
         </div>
 
-        <div id="aboutMe" className='flex flex-col order-last md:order-first md:grid md:grid-cols-2 md:gap-8 bg-gray-100'>
+        <div id="aboutMe" className='flex flex-col order-last md:order-first md:grid md:grid-cols-2 md:gap-8'>
         <div className='max-w-lg'>
           <Carousel autoSlide={true}>
             {slides.map((slide, index) => <img key={index} src={slide}></img>)}
