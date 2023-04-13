@@ -36,10 +36,10 @@ function App() {
       <div className="max-w-screen-xl w-4/5 md:w-4x5 lg:w-3/5 justify-center mx-auto my-10 bg-white shadow-myShadow">
 
         <div className='md:grid md:grid-cols-2 md:gap-8'>
-          <div className='p-12 flex items-center justify-center'>
+          <div className='p-10 flex items-center justify-center'>
             <img src="myHead.png" className='w-60 h-auto w-80 lg:h-auto'></img>
           </div>
-          <div className="flex-col p-12 flex md:items-start items-center justify-center">
+          <div className="flex-col p-10 flex md:items-start items-center justify-center">
             <p className="text-2xl">Hello, my name is</p>
             <p className="text-5xl lg:text-7xl font-bold">Dominik</p>
             <p className="text-2xl mt-12 text-center md:text-left">&#60;junior&#62;&nbsp;Full Stack Dev&nbsp;&#60;&#47;junior&#62;<span className='font-bold animate-ping text-red-500'>|</span></p>
@@ -48,7 +48,7 @@ function App() {
 
         <div id="about-me" className='order-last md:order-first md:grid md:grid-cols-2 md:gap-8 bg-gray-100'>
 
-          <div className='p-12' >
+          <div className='p-10' >
             <h2 className="text-3xl lg:text-4xl">My projects</h2>
             {projectData.map((project, index) => (
               <ProgressBar key={index} name={project.name} progression={project.progression} link={project.link} desc={project.desc} />
@@ -56,7 +56,7 @@ function App() {
             }
           </div>
 
-          <div className='p-12 flex flex-col order-first md:order-last'>
+          <div className='p-10 flex flex-col order-first md:order-last'>
             <h2 className="text-3xl lg:text-4xl">About me</h2>
             <p className='mt-5'>My name is Dominik Plavka and Iam fresh graduate of Green Fox Academy. Before this "big step" in my life, I worked as Marketing Manager in broad range of roles.</p>
             <p className='mt-5'>This experience could be very useful in web development as well, because I participated in web/graphic design and I created basic webpages for various clients.</p>
@@ -65,7 +65,7 @@ function App() {
 
         <div id="my-skills" className='md:grid md:grid-cols-2 md:gap-8'>
 
-          <div className='p-12 flex flex-col'>
+          <div className='p-10 flex flex-col'>
             <h2 className="text-3xl lg:text-4xl">Skills</h2>
             <p className='mt-5'>As Full-Stack Developer I have gained following skills:</p>
 
@@ -101,20 +101,27 @@ function App() {
           </div>
 
           <div className='flex items-center justify-center max-w-lg'>
-            <Carousel autoSlide={true} slides={slides} />
+            <Carousel slides={slides} />
           </div>
 
         </div>
 
-        <div id="contact">
-          <div className='p-12 flex items-center flex-col'>
-            <h2 className="text-3xl lg:text-4xl">Contact</h2>
+        <div id="contact" className='bg-gray-900'>
+          <div className='p-10 flex items-center flex-col'>
+            <h2 className="text-3xl lg:text-4xl text-white">Contact me</h2>
             <div className='flex gap-6 mt-5'>
               <button><a href="https://www.linkedin.com/in/dominik-plavka-0411549a/" target="blank"><SiLinkedin style={iconStyles}/></a></button>
               <button><a href="https://www.codewars.com/users/Dominik%20Plavkagithub" target="blank"><SiCodewars style={iconStyles}/></a></button>
               <button><a href="https://github.com/DominikPlavka" target="blank"><IoLogoGithub style={iconStyles}/></a></button>
             </div>
-            <p className='mt-5'>This experience could be very useful in web development as well, because I participated in web/graphic design and I created basic webpages for various clients.</p>
+            <div className='mt-5 md:grid md:grid-cols-2 md:gap-8'>
+              <div>
+                <p className='text-white'>Email:&nbsp;<a href="mailto:domino.plavka@gmail.com">domino.plavka@gmail.com</a></p>
+              </div>
+              <div>
+                <p className='text-white'>Location: Spišská Nová Ves / Slovakia</p>
+              </div>
+            </div>
           </div>
 
         </div>

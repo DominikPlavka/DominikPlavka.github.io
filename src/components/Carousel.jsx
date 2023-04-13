@@ -3,29 +3,27 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { useEffect } from 'react';
 
 
-const Carousel = ({ slides, autoSlide=false}) => {
-
-    const autoSlideInterval=3000;
+const Carousel = ({ slides, autoSlide=false }) => {
+    
+    const autoSlideInterval=2000;
 
     const [current, setCurrent] = useState(0);
 
     const previous = () => {
         setCurrent(curr => {
-            return (curr === 0 ? slides.length - 1 : curr - 1)
+            return (curr === 0 ? slides.length - 1 : curr - 1);
         })
     }
 
     const next = () => {
         setCurrent(curr => {
-            return (curr === slides.length - 1 ? 0 : curr + 1)
+            return (curr === slides.length - 1 ? 0 : curr + 1);
         })
     }
 
     useEffect (() => {
-        if (!autoSlide) return
-            const slideInterval = setInterval(next, autoSlideInterval)
-            return () => clearInterval(slideInterval)
-        
+        const slideInterval = setInterval(next, autoSlideInterval);
+        return () => clearInterval(slideInterval);
     });
 
     return (
@@ -49,7 +47,7 @@ const Carousel = ({ slides, autoSlide=false}) => {
                 </div>
             </div>
 
-            <div className="absolute inset-0 flex intems-center justify-between p-6">
+            <div className="absolute inset-0 flex items-center justify-between p-6">
                 <button onClick={previous}>
                     <AiOutlineArrowLeft />
                 </button>

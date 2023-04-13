@@ -3,7 +3,7 @@ const Navbar = () => {
     return (
         <nav className="sticky top-0 bg-white px-2 sm:px-4 py-2.5 shadow-bottomShadow z-50">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
-                <a href="#" className="flex items-center">
+                <a href="./" className="flex items-center">
                     <img src="https://svgshare.com/i/r_W.svg" className="h-6 mr-3 sm:h-9" alt="Dominik Plavka logo" />
                     <span className="self-center text-xl whitespace-nowrap">Dominik Plavka</span>
                 </a>
