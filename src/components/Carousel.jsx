@@ -3,7 +3,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { useEffect } from 'react';
 
 
-const Carousel = ({ slides, autoSlide=false,  }) => {
+const Carousel = ({ slides, autoSlide=false}) => {
 
     const autoSlideInterval=3000;
 
@@ -26,7 +26,7 @@ const Carousel = ({ slides, autoSlide=false,  }) => {
             const slideInterval = setInterval(next, autoSlideInterval)
             return () => clearInterval(slideInterval)
         
-    }, [])
+    });
 
     return (
 
@@ -34,18 +34,9 @@ const Carousel = ({ slides, autoSlide=false,  }) => {
             
             <div className="flex transition-transform ease-out duration-1000" style={{ transform: `translateX(-${current * 100}%)` }}>
                 {slides.map((data, index) =>
-                        <img src={`${data.image}`} />
+                        <img key={index} src={`${data.image}`} />
                 )}
             
-            </div>
-
-            <div className="absolute inset-0 flex intems-center justify-between p-6">
-                <button onClick={previous}>
-                    <AiOutlineArrowLeft />
-                </button>
-                <button onClick={next}>
-                    <AiOutlineArrowRight />
-                </button>
             </div>
 
             <div className='absolute bottom-4 right-0 left-0'>
@@ -56,6 +47,15 @@ const Carousel = ({ slides, autoSlide=false,  }) => {
                         </div>
                     )}
                 </div>
+            </div>
+
+            <div className="absolute inset-0 flex intems-center justify-between p-6">
+                <button onClick={previous}>
+                    <AiOutlineArrowLeft />
+                </button>
+                <button onClick={next}>
+                    <AiOutlineArrowRight />
+                </button>
             </div>
 
             {/*<div className="flex transition-transform ease-out duration-1000" style={{ transform: `translateX(-${current * 100}%)` }}>
