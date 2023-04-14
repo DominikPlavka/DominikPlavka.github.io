@@ -1,7 +1,14 @@
 import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs';
 
 const AccordionLayout = ({ title, children, index, activeIndex, setActiveIndex }) => {
-  const handleSetIndex = (indexSet) => (activeIndex !== indexSet) && setActiveIndex(index);
+  
+  const handleSetIndex = (indexSet) => {
+    if (activeIndex !== indexSet) {
+      return setActiveIndex(index);
+    } else if (activeIndex === indexSet) {
+      return setActiveIndex(null);
+    }
+  };
 
   return (
     <div>
