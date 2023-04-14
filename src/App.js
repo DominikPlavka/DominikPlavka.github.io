@@ -2,14 +2,8 @@ import Navbar from './components/Navbar';
 import ProgressBar from './components/ProgressBar';
 import Carousel from './components/Carousel';
 import Accordion from './components/Accordion/Accordion';
-import { TbBrandTypescript, TbBrandJavascript, TbBrandDocker, TbBrandReactNative, TbBrandGithub, TbBrandMongodb, TbBrandCss3, TbBrandTailwind, TbSql } from 'react-icons/tb';
-import { FaNodeJs } from 'react-icons/fa';
-import { SiExpress, SiJirasoftware, SiJest, SiLinkedin, SiCodewars } from 'react-icons/si';
-import { IoIosGitNetwork, IoLogoGithub } from 'react-icons/io';
-import { GrMysql } from 'react-icons/gr';
-import { DiScrum } from 'react-icons/di';
-import { RiCommandLine } from 'react-icons/ri';
-import { MdGeneratingTokens } from 'react-icons/md';
+import { SiLinkedin, SiCodewars } from 'react-icons/si';
+import { IoLogoGithub } from 'react-icons/io';
 
 const projectData = [
   { name: "This page", progression: "halfway done", link: "https://dominikplavka.github.io/", desc: "React, Tailwind CSS" },
@@ -41,6 +35,7 @@ function App() {
             <p className="text-2xl">Hello, my name is</p>
             <p className="text-5xl lg:text-7xl font-bold">Dominik</p>
             <p className="text-2xl mt-12 text-center md:text-left">&#60;junior&#62;&nbsp;Full Stack Dev&nbsp;&#60;&#47;junior&#62;<span className='font-bold animate-ping text-red-500'>|</span></p>
+        
           </div>
         </div>
 
@@ -61,17 +56,12 @@ function App() {
           </div>
         </div>
 
-        <div id="my-skills" className='md:grid md:grid-cols-2 md:gap-8'>
+        <div id="my-skills" className='order-last md:order-first md:grid md:grid-cols-2 md:gap-8'>
 
-          <div className='p-10 flex flex-col'>
+          <div className='p-10 flex flex-col w-full'>
             <h2 className="text-3xl lg:text-4xl">Skills</h2>
             <p className='mt-5'>As Full-Stack Developer I have gained following skills:</p>
-
-           
-              <Accordion/>
-              
-
-            
+            <Accordion/>
           </div>
 
           <div className='flex items-center justify-center max-w-lg'>
@@ -85,7 +75,7 @@ function App() {
             <h2 className="text-3xl lg:text-4xl text-white">Contact me</h2>
             <div className='flex gap-6 mt-5'>
               <button><a href="https://www.linkedin.com/in/dominik-plavka-0411549a/" target="blank"><SiLinkedin style={iconStyles}/></a></button>
-              <button><a href="https://www.codewars.com/users/Dominik%20Plavkagithub" target="blank"><SiCodewars style={iconStyles}/></a></button>
+              <button><a href="https://www.codewars.com/users/Dominik%20Plavka" target="blank"><SiCodewars style={iconStyles}/></a></button>
               <button><a href="https://github.com/DominikPlavka" target="blank"><IoLogoGithub style={iconStyles}/></a></button>
             </div>
             <div className='mt-5 md:grid md:grid-cols-2 md:gap-8'>
@@ -99,7 +89,6 @@ function App() {
           </div>
 
         </div>
-
       </div>
 
       <div className='mb-10 ml-20 mr-20'>

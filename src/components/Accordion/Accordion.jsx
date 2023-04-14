@@ -29,6 +29,7 @@ const Accordion = () => {
               <span className='flex items-center py-1 px-2 border-solid mt-5 bg-black rounded-md text-white block'><TbBrandCss3/>&nbsp;CSS</span>
               <span className='flex items-center py-1 px-2 border-solid mt-5 bg-black rounded-md text-white block'><TbBrandTailwind/>&nbsp;Tailwind CSS</span>
             </div>
+            
           </AccordionLayout>
 
           <AccordionLayout 
