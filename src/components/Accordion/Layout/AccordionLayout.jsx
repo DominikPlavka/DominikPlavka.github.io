@@ -3,11 +3,7 @@ import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/
 const AccordionLayout = ({ title, children, index, activeIndex, setActiveIndex }) => {
   
   const handleSetIndex = (indexSet) => {
-    if (activeIndex !== indexSet) {
-      return setActiveIndex(index);
-    } else if (activeIndex === indexSet) {
-      return setActiveIndex(null);
-    }
+    (activeIndex !== indexSet) ? setActiveIndex(index) : setActiveIndex(null);
   };
 
   return (
