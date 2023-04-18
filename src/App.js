@@ -12,10 +12,10 @@ const projectData = [
 ];
 
 const slides = [
-  { image: "nodeJS.png" },
   { image: "TS-JS.png" },
   { image: "react.png" },
-  { image: "github.png" }
+  { image: "github.png" },
+  { image: "nodeJS.png" }
 ];
 
 let iconStyles = { color: "grey", fontSize: "2em" };
@@ -68,7 +68,6 @@ function App() {
           <div className='flex items-center justify-center max-w-lg'>
             <Carousel slides={slides} />
           </div>
-
         </div>
 
         <div id="contact" className='bg-gray-900'>
@@ -107,11 +106,11 @@ function App() {
       </div>
 
       <div className='mb-10 ml-20 mr-20'>
-        <p className='text-white text-center'>This page doesn't use any external packages, except <a href="https://react-icons.github.io/react-icons/" target="_blank"><span className='text-sky-400'>react-icons</span></a>. Latest version deployed 12.4.2023</p>
+        <p className='text-white text-center'>This page doesn't use any external packages, except <a href="https://react-icons.github.io/react-icons/" target="_blank"><span className='text-sky-400'>react-icons</span></a>. Latest version deployed 18.4.2023</p>
       </div>
 
     </div>
-  );
+  )
 }
 
 export default App;
