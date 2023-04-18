@@ -7,7 +7,7 @@ import { SiLinkedin, SiCodewars } from 'react-icons/si';
 import { IoLogoGithub } from 'react-icons/io';
 
 const projectData = [
-  { name: "This page", progression: "halfway done", link: "https://dominikplavka.github.io/", desc: "React, Tailwind CSS" },
+  { name: "This page", progression: "done", link: "https://dominikplavka.github.io/", desc: "React, Tailwind CSS" },
   { name: "WeatherApp", progression: "finalizing", link: "https://weather-app-psi-dun-45.vercel.app/", desc: "MERN app with authentication (JWT)" }
 ];
 
@@ -30,7 +30,7 @@ function App() {
 
         <div className='md:grid md:grid-cols-2 md:gap-8'>
           <div className='p-10 flex items-center justify-center'>
-            <img src="myHead.png" className='w-60 h-auto w-80 lg:h-auto'></img>
+            <img src="myHead.png" alt="portrait of Dominik Plavka" className='w-60 h-auto w-80 lg:h-auto'></img>
           </div>
           <div className="flex-col p-10 flex md:items-start items-center justify-center">
             <p className="text-2xl">Hello, my name is</p>
@@ -75,13 +75,23 @@ function App() {
           <div className='p-10 flex items-center flex-col'>
             <h2 className="text-3xl lg:text-4xl text-white">Contact me</h2>
             <div className='flex gap-6 mt-5'>
-              <button className='hover:animate-bounce'><a href="https://www.linkedin.com/in/dominik-plavka-0411549a/" target="blank"><SiLinkedin style={iconStyles} /></a></button>
-              <button className='hover:animate-bounce'><a href="https://www.codewars.com/users/Dominik%20Plavka" target="blank"><SiCodewars style={iconStyles} /></a></button>
-              <button className='hover:animate-bounce'><a href="https://github.com/DominikPlavka" target="blank"><IoLogoGithub style={iconStyles} /></a></button>
+              <button className='hover:animate-bounce'>
+                <a href="https://www.linkedin.com/in/dominik-plavka-0411549a/" target="blank">
+                  <SiLinkedin style={iconStyles} />
+                </a>
+              </button>
+              <button className='hover:animate-bounce'>
+                <a href="https://www.codewars.com/users/Dominik%20Plavka" target="blank">
+                  <SiCodewars style={iconStyles} />
+                </a>
+              </button>
+              <button className='hover:animate-bounce'><a href="https://github.com/DominikPlavka" target="blank" rel="noreferrer"><IoLogoGithub style={iconStyles} /></a></button>
             </div>
             <div className='mt-5 md:grid md:grid-cols-2 md:gap-8'>
               <div>
-                <p className='text-white'>Email:&nbsp;<a href="mailto:domino.plavka@gmail.com">domino.plavka@gmail.com</a></p>
+                <p className='text-white'>Email:&nbsp;
+                  <a href="mailto:domino.plavka@gmail.com">domino.plavka@gmail.com</a>
+                </p>
               </div>
               <div>
                 <p className='text-white'>Location: Spišská Nová Ves / Slovakia</p>
@@ -90,7 +100,6 @@ function App() {
           </div>
 
           <div id="joke" className='bg-red-600'>
-            <h2 className="p-10 text-white text-3xl lg:text-4xl text-center">Didn't get amused? Try this!</h2>
             <Joke />
           </div>
 

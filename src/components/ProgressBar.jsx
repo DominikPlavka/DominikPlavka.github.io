@@ -8,18 +8,13 @@ const ProgressBar = ({ name, progression, link, desc }) => {
     useEffect(() => {
         if (progression === "starting") {
             setWidth("w-1/4");
-            setPulse("");
-        } else if (progression === "halfway done") {
+        } else if (progression === "half-done") {
             setWidth("w-1/2");
-            setPulse("");
         } else if (progression === "finalizing") {
             setPulse("animate-pulse");
             setWidth("w-3/4");
         } else if (progression === "done") {
             setWidth("w-full");
-            setPulse("");
-        } else {
-            setPulse("");
         }
     }, [progression]);
 
