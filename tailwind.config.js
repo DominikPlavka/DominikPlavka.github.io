@@ -10,6 +10,9 @@ module.exports = {
       bottomShadow: "1px 5px 13px -5px rgba(0,0,0,0.75)"
     },
     extend: {},
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif']
+    },
   },
   plugins: [],
 }
