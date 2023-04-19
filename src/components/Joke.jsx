@@ -40,7 +40,6 @@ function Joke() {
                     setPress("scale-90");
                 }}
                 onTouchEnd={() => {
-                    fetchJoke();
                     setPress("scale-100");
                 }}
                 className={`flex bg-white text-red-600 font-bold items-center justify-center w-28 h-28 rounded-full ${press}`}>
