@@ -6,6 +6,7 @@ function Joke() {
     const [press, setPress] = useState("");
 
     const url = 'https://backend-omega-seven.vercel.app/api/getjoke';
+    const audio = new Audio("SoundEffect.mp3");
 
     async function fetchJoke() {
         try {
@@ -21,7 +22,7 @@ function Joke() {
     }
 
     return (
-        <div className="flex justify-center items-center flex-col p-10 gap-10">
+        <div className="flex justify-center items-center flex-col p-10 gap-10 bg-red-600">
             <h2 className="text-white text-3xl lg:text-4xl text-center">Not feeling excited? Try this!</h2>
             <button
                 onMouseDown={() => {
@@ -33,6 +34,7 @@ function Joke() {
                 onMouseUp={() => {
                     fetchJoke();
                     setPress("scale-100");
+                    audio.play();
                 }}
                 onTouchStart={() => {
                     setPress("scale-90");
