@@ -25,16 +25,25 @@ function Joke() {
             <h2 className="text-white text-3xl lg:text-4xl text-center">Not feeling excited? Try this!</h2>
             <button
                 onMouseDown={() => {
-                    setPress("focus:scale-90");
+                    setPress("scale-90");
+                }}
+                onMouseLeave={() => {
+                    setPress("scale-100");
                 }}
                 onMouseUp={() => {
                     fetchJoke();
                     setPress("scale-100");
                 }}
-                onMouseLeave={() => {
+                onTouchStart={() => {
+                    setPress("scale-90");
+                }}
+                onTouchEnd={() => {
+                    fetchJoke();
                     setPress("scale-100");
                 }}
-                className={`flex bg-white text-red-600 font-bold items-center justify-center w-28 h-28 rounded-full ${press}`}>CLICK ME!</button>
+                className={`flex bg-white text-red-600 font-bold items-center justify-center w-28 h-28 rounded-full ${press}`}>
+                    CLICK ME
+            </button>
             { joke &&
                 <div>
                     <p className="text-white text-center"><span className="underline">QUESTION:</span><span className="italic"> {joke.question}</span></p>
