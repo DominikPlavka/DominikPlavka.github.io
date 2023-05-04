@@ -1,6 +1,8 @@
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./ProgressBar"
 
 const AboutMe = () => {
+
+    const iconStyle = {color: "red"};
 
     const projectData = [
         { name: "This page", progression: "done", link: "https://dominikplavka.github.io/", desc: "React, Tailwind CSS" },
@@ -22,6 +24,7 @@ const AboutMe = () => {
                 <h2 className="text-3xl lg:text-4xl">About me</h2>
                 <p className='mt-5'>My name is Dominik Plavka and Iam fresh graduate of Green Fox Academy. Before this "big step" in my life, I worked as Marketing Manager in broad range of roles.</p>
                 <p className='mt-5'>This experience could be very useful in web development as well, because I participated in web/graphic design and I created basic webpages for various clients.</p>
+                <a className="mt-5 font-bold transition ease-in-out delay-150 hover:text-red-600" href="https://drive.google.com/file/d/1_Pq5FVDGogHP4dG6KTXDIWITGpX6TwYp/view" target="_blank"> Want to learn about me more? Click here and see my CV!</a>
             </div>
         </div>
     )
