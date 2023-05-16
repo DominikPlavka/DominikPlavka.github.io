@@ -21,7 +21,7 @@ const ProgressBar = ({ name, progression, link, desc }) => {
     return (
         <div className="mt-5">
             <div className="flex justify-between mb-1">
-                <span className="text-base font-medium text-sky-500">{link && <button><a href={link}>{name}</a></button>}</span>
+                <span className="text-base font-medium text-sky-500">{link ? (<button><a href={link} target="_blank" rel="noreferrer">{name}</a></button>) : <p>{name}</p>}</span>
                 <span className={`text-sm font-medium text-sky-500 ${pulse}`}>{progression}</span>
             </div>
 
@@ -30,7 +30,7 @@ const ProgressBar = ({ name, progression, link, desc }) => {
             </div>
 
             <div className="flex justify-between mb-1">
-                <p className="text-base mt-2">Tech used: {desc}</p>
+                <p className="text-base mt-2">{desc}</p>
             </div>
         </div>
     );
